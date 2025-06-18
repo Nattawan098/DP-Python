@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Exercise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex; /* ใช้ flexbox เพื่อจัดตารางให้อยู่กึ่งกลางหน้าจอ */
+            justify-content: center; /* จัดแนวนอนกึ่งกลาง */
+            align-items: center; /* จัดแนวตั้งกึ่งกลาง */
+            min-height: 100vh; /* ทำให้ body สูงเต็มหน้าจอ */
+            margin: 0;
+            background-color: #f0f0f0; /* สีพื้นหลังหน้าเว็บโดยรวม */
+        }
+
+        table {
+            border-collapse: collapse; /* ทำให้เส้นขอบตารางและเซลล์รวมกัน */
+            width: 70%; /* กำหนดความกว้างของตาราง (สามารถปรับได้) */
+            max-width: 800px; /* จำกัดความกว้างสูงสุด */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเล็กน้อย */
+        }
+
+        td {
+            padding: 40px 20px; /* กำหนด padding ภายในเซลล์ */
+            border: 1px solid #ccc; /* เส้นขอบเซลล์ */
+            text-align: center; /* จัดข้อความให้อยู่กึ่งกลาง */
+            font-size: 1.2em; /* ขนาดตัวอักษร */
+            font-weight: bold;
+            color: #333; /* สีข้อความ */
+        }
+
+        /* กำหนดสีพื้นหลังและข้อความสำหรับ First cell */
+        .first-cell {
+            background-color: #C1E1C1; /* สีเขียวอ่อนคล้ายในรูป (สามารถเปลี่ยนได้) */
+            color: #333; /* สีข้อความในเซลล์นี้ */
+        }
+
+        /* กำหนดสีพื้นหลังและข้อความสำหรับ Second cell */
+        .second-cell {
+            background-color: #FFB3A7; /* สีส้มอ่อนคล้ายในรูป (สามารถเปลี่ยนได้) */
+            color: #333; /* สีข้อความในเซลล์นี้ */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td class="first-cell">
+                First cell - My custom text!
+            </td>
+            <td class="second-cell">
+                Second cell - Another choice of text.
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

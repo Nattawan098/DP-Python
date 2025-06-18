@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.parallax-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Important for parallax */
+    background-attachment: fixed; /* This creates the parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Set specific background images for each parallax section */
+#section1 {
+    background-image: url('image1.jpg'); /* CHANGE THIS TO YOUR FIRST IMAGE FILE */
+}
+
+#section2 {
+    background-image: url('image2.jpg'); /* CHANGE THIS TO YOUR SECOND IMAGE FILE */
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.normal-section {
+    height: auto; /* Adjust height based on content */
+    padding: 50px;
+    background-color: black; /* Solid black background for normal section */
+    color: white;
+    text-align: center;
+}
+
+.normal-section .content {
+    background-color: transparent; /* No additional background for content within normal section */
+    box-shadow: none;
+}

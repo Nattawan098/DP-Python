@@ -1,0 +1,61 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 25px;
+}
+
+#newButton {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-bottom: 30px; /* ระยะห่างจาก To-Do List */
+}
+
+#newButton:hover {
+    background-color: #218838; /* Darker green */
+}
+
+#ft_list {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px; /* จำกัดความกว้างสูงสุด */
+    border: 1px solid #e0e0e0;
+    min-height: 100px; /* ขนาดขั้นต่ำเพื่อให้เห็นกรอบ */
+}
+
+.todo-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 10px; /* ระยะห่างระหว่างแต่ละ item */
+    font-size: 1.1em;
+    color: #495057;
+    cursor: pointer; /* เพื่อให้รู้ว่าคลิกได้ */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    word-wrap: break-word; /* ข้อความยาวๆ จะขึ้นบรรทัดใหม่ได้ */
+}
+
+.todo-item:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px); /* ยกขึ้นเล็กน้อยเมื่อ hover */
+}

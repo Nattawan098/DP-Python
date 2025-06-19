@@ -1,0 +1,19 @@
+/* จัดสไตล์พื้นฐานของหน้าเว็บ */
+body {
+    display: flex; /* ใช้ Flexbox เพื่อจัดลูกโป่งให้อยู่กึ่งกลางหน้าจอ */
+    justify-content: center; /* จัดแนวนอนกึ่งกลาง */
+    align-items: center; /* จัดแนวตั้งกึ่งกลาง */
+    min-height: 100vh; /* ให้ body มีความสูงอย่างน้อยเท่ากับความสูงของหน้าจอ */
+    margin: 0; /* ลบ margin เริ่มต้นของ body */
+    background-color: #f0f0f0; /* สีพื้นหลังอ่อนๆ */
+}
+
+/* สไตล์เริ่มต้นสำหรับลูกโป่ง */
+#balloon {
+    width: 200px; /* กว้าง 200px */
+    height: 200px; /* สูง 200px */
+    background-color: red; /* พื้นหลังสีแดงเริ่มต้น */
+    border-radius: 50%; /* ทำให้เป็นรูปทรงกลม */
+    cursor: pointer; /* เปลี่ยน Cursor เมื่อชี้เมาส์ เพื่อให้รู้ว่าคลิกได้ */
+    transition: all 0.2s ease-in-out; /* เพิ่ม transition ให้การเปลี่ยนขนาดและสีดูราบรื่น */
+}

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* จัดองค์ประกอบในแนวตั้ง */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap; /* ให้บรรทัดขึ้นใหม่ได้ถ้าพื้นที่ไม่พอ */
+    gap: 15px; /* ระยะห่างระหว่างองค์ประกอบ */
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],
+select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 150px; /* กำหนดความกว้าง */
+    box-sizing: border-box; /* ให้ padding ไม่เพิ่มขนาดรวม */
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #28a745; /* สีเขียว */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* สีเขียวเข้มขึ้น */
+}

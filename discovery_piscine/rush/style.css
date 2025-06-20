@@ -1,233 +1,84 @@
-/* ============================================== */
-/* 1. CSS ทั่วไป / พื้นฐาน (General / Base Styles) */
-/* ใช้ได้กับทุกหน้า (index.html, my_cv_style1.html, my_cv_style2.html) */
-/* ============================================== */
-
-body {
-    padding-top: 70px; /* เพิ่ม padding ด้านบน เพื่อไม่ให้เนื้อหาถูก Navbar บัง */
-    background-color: #f8f9fa; /* สีพื้นหลังอ่อนๆ ทั่วไปสำหรับ Body */
-    font-family: 'Arial', sans-serif; /* Font พื้นฐาน (ถ้ายังไม่ได้ import Font อื่น) */
-    color: #333; /* สีข้อความพื้นฐาน */
+/* ------------------------------------ */
+/* Contact Section           */
+/* ------------------------------------ */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* สีพื้นหลังของส่วน Contact */
+    border-top: 1px solid #eee; /* เส้นแบ่งส่วน */
 }
 
-/* Navbar ทั่วไป (ถ้าใช้ Bootstrap class fixed-top ก็อาจไม่ต้องเขียนเยอะ) */
-.navbar-brand {
+#contact h2 {
+    color: #0056b3;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.contact-links {
+    list-style: none; /* ลบจุดนำหน้าลิสต์ */
+    padding: 0;
+    margin: 0 auto 30px auto; /* จัดกึ่งกลางและเพิ่มระยะห่างด้านล่าง */
+    max-width: 600px; /* จำกัดความกว้าง */
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงไอคอนในแนวนอน */
+    justify-content: center; /* จัดกึ่งกลางไอคอนในแนวนอน */
+    flex-wrap: wrap; /* ให้ไอคอนขึ้นบรรทัดใหม่เมื่อหน้าจอเล็ก */
+    gap: 20px; /* ระยะห่างระหว่างไอคอน */
+}
+
+.contact-links li {
+    margin: 10px 0; /* ระยะห่างระหว่างแต่ละรายการในลิสต์ */
+}
+
+.contact-links a {
+    text-decoration: none; /* ลบขีดเส้นใต้ลิงก์ */
+    color: #333;
     font-weight: bold;
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงไอคอนกับข้อความ */
+    align-items: center; /* จัดกึ่งกลางแนวตั้งระหว่างไอคอนกับข้อความ */
+    transition: color 0.3s ease; /* เพิ่มเอฟเฟกต์การเปลี่ยนสีเมื่อ hover */
 }
-.nav-link {
+
+.contact-links a:hover {
+    color: #007bff; /* เปลี่ยนสีข้อความเมื่อเมาส์ชี้ */
+}
+
+.contact-icon {
+    width: 30px; /* กำหนดความกว้างของไอคอน */
+    height: 30px; /* กำหนดความสูงของไอคอน */
+    margin-right: 10px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+    vertical-align: middle; /* จัดแนวตั้งให้ตรงกับข้อความ */
+}
+
+/* จัดรูปแบบสำหรับลิงก์อีเมลแยกต่างหาก */
+#contact p a {
+    display: inline-flex; /* ใช้ inline-flex เพื่อให้อยู่บรรทัดเดียวกันกับข้อความ "หรือส่งอีเมล..." */
+    align-items: center;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
-.nav-link:hover {
-    color: #cccccc !important; /* สีเมื่อ Hover บน Navbar Link */
-}
 
-/* สไตล์สำหรับรูปภาพทั่วไป (ใช้ได้ทั้ง 2 CV) */
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-.rounded-circle {
-    border-radius: 50% !important; /* ทำให้รูปเป็นวงกลม */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* เพิ่มเงาเบาๆ ให้รูปโปรไฟล์ */
-}
-
-/* สไตล์สำหรับ Section ทั่วไป */
-section {
-    padding: 60px 0; /* Padding บน-ล่าง สำหรับทุก Section */
-    margin-bottom: 30px; /* ระยะห่างระหว่าง Section */
-}
-section:last-of-type {
-    margin-bottom: 0; /* ไม่ต้องมี margin ด้านล่างสุด */
-}
-
-/* สไตล์สำหรับ Heading ทั่วไป */
-h1, h2, h3, h4, h5, h6 {
-    color: #212529; /* สีข้อความหัวข้อทั่วไป */
-    font-weight: 600;
-}
-
-/* สไตล์สำหรับปุ่มทั่วไป (ถ้าใช้ Bootstrap button) */
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-/* Social Links Icon (ใช้ได้ทั้ง 2 CV) */
-.social-links img {
-    transition: transform 0.2s ease-in-out; /* เพิ่ม animation ตอน hover */
-}
-.social-links img:hover {
-    transform: scale(1.1); /* ขยายเล็กน้อยตอน hover */
-}
-
-/* Footer ทั่วไป */
-footer {
-    background-color: #343a40; /* สีพื้นหลัง Footer */
-    color: #f8f9fa; /* สีข้อความ Footer */
-    padding: 20px 0;
-}
-
-/* ========================================================= */
-/* 2. CSS สำหรับ my_cv_style1.html (เฉพาะสไตล์ที่ 1) */
-/* ใช้คลาสพื้นฐานของ Bootstrap เป็นหลัก อาจมี CSS เพิ่มเติมน้อยๆ */
-/* ========================================================= */
-
-/* ตัวอย่าง: ถ้า About section ใน style1 มี Background สีขาว และจัดกลาง */
-#about { /* ID นี้ถูกใช้ใน my_cv_style1.html */
-    background-color: #ffffff;
-    text-align: center;
-    border-bottom: 1px solid #e9ecef; /* เส้นแบ่งเบาๆ */
-}
-#about img {
-    border: 4px solid #007bff; /* สีขอบรูปโปรไฟล์ใน style1 */
-}
-
-/* ตัวอย่าง: ถ้า Showcase section ใน style1 มี Background สีเทาอ่อน */
-#showcase { /* ID นี้ถูกใช้ใน my_cv_style1.html */
-    background-color: #f8f9fa;
-}
-
-/* ตัวอย่าง: ถ้า Contact section ใน style1 มี Background สีขาว */
-#contact { /* ID นี้ถูกใช้ใน my_cv_style1.html */
-    background-color: #ffffff;
-    text-align: center;
-}
-
-/* ========================================================== */
-/* 3. CSS สำหรับ my_cv_style2.html (สไตล์ที่ 2 ที่แตกต่าง) */
-/* จะใช้คลาสที่คุณเพิ่มเข้าไปใน HTML ของ my_cv_style2.html */
-/* ========================================================== */
-
-/* ส่วน About ใน Style 2 */
-.my-about-section-2 {
-    background-color: #e0f7fa; /* สีพื้นหลังที่แตกต่าง (โทนฟ้าอ่อน) */
-    padding-top: 120px !important; /* เพิ่ม padding ด้านบนให้มากขึ้น */
-    padding-bottom: 80px;
-    border-radius: 15px; /* เพิ่มขอบโค้งมนให้กับ section */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเบาๆ */
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.my-about-section-2 .my-photo-style2 {
-    border: 6px solid #4CAF50; /* เปลี่ยนสีขอบรูปให้แตกต่าง (โทนเขียว) */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้รูป */
-    transition: transform 0.3s ease-in-out; /* เพิ่ม animation */
-}
-
-.my-about-section-2 .my-photo-style2:hover {
-    transform: scale(1.05); /* ขยายรูปเล็กน้อยเมื่อ hover */
-}
-
-.my-about-section-2 .my-heading-style2 {
-    color: #3F51B5; /* สีหัวข้อใหม่ (โทนม่วง/น้ำเงินเข้ม) */
-    /* Font family นี้ต้อง import จาก Google Fonts ใน my_cv_style2.html หรือใน CSS นี้ก่อน */
-    /* font-family: 'Montserrat', sans-serif; */
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* เพิ่มเงาให้ข้อความ */
-}
-
-.my-about-section-2 .my-lead-style2 {
-    color: #666;
-    font-style: italic;
-    margin-top: 15px;
-}
-
-/* ส่วน Showcase ใน Style 2 */
-.my-showcase-section-2 {
-    background-color: #f0f8ff; /* สีพื้นหลังที่แตกต่าง (ฟ้าอ่อนกว่า) */
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.my-showcase-section-2 .badge-skill { /* ใช้คลาสใหม่สำหรับ Skill Badges */
-    font-size: 1.1em;
-    padding: 8px 15px;
-    border-radius: 20px;
-    margin: 5px;
-    display: inline-block;
-    background-color: #007bff !important; /* สี badge */
-    color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.my-showcase-section-2 .card-experience-2 { /* สไตล์ Card ประสบการณ์ใน Style 2 */
-    border: 1px solid #cceeff;
-    border-left: 5px solid #0056b3; /* เพิ่มเส้นหนาด้านซ้าย */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-}
-.my-showcase-section-2 .card-experience-2 .card-title {
+#contact p a:hover {
     color: #0056b3;
 }
 
+/* ------------------------------------ */
+/* Responsive Adjustments    */
+/* ------------------------------------ */
+@media (max-width: 768px) {
+    /* ... (สไตล์ responsive ของ About section) ... */
 
-/* ส่วน Contact ใน Style 2 */
-.my-contact-section-2 {
-    background-color: #ccedff; /* สีพื้นหลังที่แตกต่าง (ฟ้าคราม) */
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.my-contact-section-2 .social-icon-2 { /* ใช้คลาสใหม่สำหรับ Social Icons */
-    width: 60px; /* ขนาดไอคอนใหญ่ขึ้น */
-    height: 60px;
-    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3)); /* เพิ่มเงาให้ไอคอน */
-    transition: all 0.3s ease;
-    background-color: #ffffff; /* พื้นหลังสีขาว */
-    border-radius: 50%; /* ทำให้เป็นวงกลม */
-    padding: 5px; /* เพิ่ม padding ในไอคอน */
-}
-
-.my-contact-section-2 .social-icon-2:hover {
-    transform: rotate(5deg) scale(1.2); /* เพิ่ม rotation และ scale เมื่อ hover */
-    filter: brightness(1.2); /* ทำให้สว่างขึ้นเมื่อ hover */
-}
-
-
-/* ========================================================== */
-/* 4. Media Queries สำหรับ Responsive Design */
-/* ควรมีทั้งสำหรับสไตล์ทั่วไปและสไตล์เฉพาะ (ถ้าจำเป็น) */
-/* ========================================================== */
-
-@media (max-width: 767.98px) { /* สำหรับหน้าจอขนาดเล็ก (<768px) */
-    body {
-        padding-top: 60px; /* ปรับ padding สำหรับมือถือ */
-    }
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.7em; }
-    .lead { font-size: 0.9em; }
-
-    /* สำหรับ Style 1 */
-    #about img,
-    #showcase .img-fluid,
-    #contact img {
-        width: 120px !important; /* ปรับขนาดรูปในมือถือ */
-        height: 120px !important;
+    /* สไตล์ responsive สำหรับ Contact */
+    .contact-links {
+        flex-direction: column; /* เปลี่ยนเป็นแนวตั้งบนมือถือ */
+        align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+        gap: 15px;
     }
 
-    /* สำหรับ Style 2 (ถ้าเปลี่ยน Layout แบบ col-md-X) */
-    .my-about-section-2 .text-md-start {
-        text-align: center !important; /* บนมือถือให้ข้อความจัดกลาง */
+    .contact-icon {
+        width: 25px;
+        height: 25px;
     }
-    .my-about-section-2 .order-md-1,
-    .my-about-section-2 .order-md-2 {
-        order: unset !important; /* บนมือถือให้กลับไปเรียงตามลำดับปกติ (รูปอยู่บน ข้อความอยู่ล่าง) */
-    }
-    .my-about-section-2 .my-photo-style2 {
-        width: 150px !important; /* ปรับขนาดรูปใน style 2 บนมือถือ */
-        height: 150px !important;
-    }
-    .my-showcase-section-2 .badge-skill {
-        font-size: 0.9em;
-        padding: 6px 10px;
-    }
-    .my-contact-section-2 .social-icon-2 {
-        width: 45px;
-        height: 45px;
-    }
+    
 }
